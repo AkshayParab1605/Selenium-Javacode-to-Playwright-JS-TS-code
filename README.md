@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/25108854/README.md)
+[README.md](https://github.com/user-attachments/files/25108983/README.md)
 # BLAST: Selenium to Playwright Converter (Local LLM)
 
 **BLAST** (Bridging Legacy Automation to Standardized TypeScript) is a local, privacy-focused tool designed to automatically convert legacy **Selenium Java** test code into modern **Playwright TypeScript** with functional parity and best practices.
@@ -11,10 +11,10 @@ It leverages a local LLM (**Ollama/CodeLlama**) to perform the conversion, ensur
 
 ```mermaid
 graph TD
-    User([QA Engineer]) <-->|Interacts via Browser| UI[Web Interface \n(HTML/JS/CSS)]
-    UI <-->|POST /api/convert| Backend[Flask Server \n(app.py)]
-    Backend <-->|Generate Code| Ollama[Ollama Local API]
-    Ollama <-->|Inference| Model[CodeLlama Model]
+    User(["QA Engineer"]) <-->|Interacts via Browser| UI["Web Interface<br>(HTML/JS/CSS)"]
+    UI <-->|"POST /api/convert"| Backend["Flask Server<br>(app.py)"]
+    Backend <-->|"Generate Code"| Ollama["Ollama Local API"]
+    Ollama <-->|Inference| Model["CodeLlama Model"]
     
     subgraph "Local Environment"
     UI
