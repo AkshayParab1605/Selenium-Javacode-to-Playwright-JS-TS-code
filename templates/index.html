@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium to Playwright Converter (Local LLM)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Selenium ➔ Playwright Converter</h1>
+        <div class="status" id="statusText">Ready to convert</div>
+    </header>
+
+    <main>
+        <div class="controls">
+            <h2 style="font-size: 1rem; color: var(--text-secondary); font-weight: normal;">
+                Powered by <strong>Ollama (codellama)</strong>
+            </h2>
+            <button id="convertBtn" class="btn">
+                Convert Code
+            </button>
+        </div>
+
+        <div class="editor-container">
+            <div class="panel">
+                <div class="panel-header">
+                    <span>SELENIUM JAVA (SOURCE)</span>
+                </div>
+                <textarea id="javaInput" class="editor" placeholder="// Paste your Selenium Java Code here...
+@Test
+public void loginTest() {
+    driver.get('https://example.com');
+    // ...
+}"></textarea>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <span>PLAYWRIGHT TYPESCRIPT (OUTPUT)</span>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button id="copyBtn" class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Copy</button>
+                        <button id="downloadBtn" class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Download .ts</button>
+                    </div>
+                </div>
+                <textarea id="playwrightOutput" class="editor" readonly placeholder="// Converted Playwright code will appear here..."></textarea>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
